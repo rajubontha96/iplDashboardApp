@@ -58,17 +58,13 @@ class TeamMatches extends Component {
   }
 
   render() {
-    const {
-      isLoading,
-      teamBannerUrl,
-      latestMatchDetails,
-      recentMatches,
-    } = this.state
+    const {isLoading, teamBannerUrl, latestMatchDetails, recentMatches} =
+      this.state
 
     return (
       <div className="team-matches-container">
         {isLoading ? (
-          <div data-testid="loader" className="loader-container">
+          <div testid="loader" className="loader-container">
             <Loader type="Oval" color="#ffffff" height={50} width={50} />
           </div>
         ) : (
